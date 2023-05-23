@@ -1,10 +1,21 @@
-import { useReducer } from "react";
-import { initialState, reducer } from "./Components/reducer.js";
+import { useReducer, useEffect } from "react";
+import { reducer } from "./Components/reducer.js";
 import TodoForm from "./Components/TodoForm.jsx";
 import TodoList from "./Components/TodoList.jsx";
+
 import "./App.css";
 function App() {
+  // To get data from lacalStorage
+  const storedTodos = JSON.parse(localStorage.getItem("todos"));
+  const initialState = {
+    todos: storedTodos || [],
+  };
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  // To store the data in string format in local storage
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(state.todos));
+  }, [state.todos]);
   return (
     <>
       <div className="p-3 mb-5">

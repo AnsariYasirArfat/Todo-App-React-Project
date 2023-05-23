@@ -1,12 +1,5 @@
 import { nanoid } from "nanoid";
 
-export const initialState = {
-  todos: [
-    { id: nanoid(), text: "hi there" },
-    { id: nanoid(), text: "hidddd there" },
-  ],
-};
-
 export const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TODO":

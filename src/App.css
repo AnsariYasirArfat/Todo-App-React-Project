@@ -1,42 +1,67 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  background-color: rgb(186 230 253);
+  /* bg-sky-200 */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.addTaskForm {
+  background-color: #082837;
+  transition: all 0.7s ease-in-out;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.addTaskForm:hover {
+  background-color: rgb(186 230 253);
+  box-shadow: 2px 2px 20px #082837;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.inputText {
+  color: #082837;
+  background-color: #051a26;
+  font-weight: 600;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputText::placeholder {
+  color: #082f49;
+  padding: 5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input:focus {
+  font-weight: 500;
+  border: none;
+  background-color: #082f49;
+  color: #0ea5e9;
+  box-shadow: none;
+  outline: none;
 }
 
-.card {
-  padding: 2em;
+.addTaskButton {
+  height: 40px;
+  color: #082837;
+  transition: all 0.5s ease-in-out;
 }
 
-.read-the-docs {
-  color: #888;
+.editTodoInput {
+  background-color: rgb(186 230 253);
+  box-shadow: 2px 2px 20px #082837;
+  color: #0ea5e9;
+}
+
+.todoItem:hover {
+  scale: 1.02;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Scrollbar styling */
+.todoScroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.todoScroll::-webkit-scrollbar-track {
+  background-color: #0ea5e9;
+}
+
+.todoScroll::-webkit-scrollbar-thumb {
+  background-color: #e9f08e;
+}
+
+/* Style of Scrollbar For FireFox browser */
+.todoScroll {
+  scrollbar-width: thin;
+  scrollbar-color: #e9f08e #447ca4;
 }

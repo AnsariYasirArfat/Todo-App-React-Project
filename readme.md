@@ -37,11 +37,11 @@ https://todoapp-react-usereducer-hook-yasir.netlify.app/
 
 [![Demo Video](./output.gif)](./video.mp4)
 
-<!-- ![output](./output.gif)
+![output](./output.gif)
 
 <video width="640" height="360" controls>
   <source src="./video.mp4" type="video/mp4">
   Your browser does not support the video tag.
-</video> -->
+</video>
 
 ---
